@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerContainerView" customModule="ios_sample_drawer" customModuleProvider="target">
+            <connections>
+                <outlet property="sampleTextLabel" destination="WPe-hl-XiP" id="N6B-Kc-QFX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ipv-Gc-V2o">
+                    <rect key="frame" x="167" y="14" width="40" height="8"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29593857019999997" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="5eC-jV-xD6"/>
+                        <constraint firstAttribute="width" constant="40" id="yrm-3V-Aw8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPe-hl-XiP">
+                    <rect key="frame" x="165" y="136" width="45" height="48"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Cxv-kF-TDc"/>
+                        <constraint firstAttribute="width" constant="45" id="Gl7-xD-ZNQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ikM-Ii-SmT" appends="YES" id="JSf-wg-NyI"/>
+                    </connections>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↓SUSHI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFp-RT-QeF">
+                    <rect key="frame" x="0.0" y="45" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UM7-e2-WxW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zFp-RT-QeF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4gD-Ok-fLP"/>
+                <constraint firstItem="WPe-hl-XiP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4hG-46-QLw"/>
+                <constraint firstItem="WPe-hl-XiP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IBf-aW-eSp"/>
+                <constraint firstItem="Ipv-Gc-V2o" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="IbZ-KU-uSu"/>
+                <constraint firstItem="zFp-RT-QeF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="M6n-GH-rae"/>
+                <constraint firstItem="Ipv-Gc-V2o" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tdw-qh-1oM"/>
+                <constraint firstItem="zFp-RT-QeF" firstAttribute="top" secondItem="Ipv-Gc-V2o" secondAttribute="bottom" constant="23" id="xeD-dN-AOr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="101.5" y="-128"/>
+        </view>
+        <tapGestureRecognizer id="ikM-Ii-SmT">
+            <connections>
+                <action selector="didTapSushi:" destination="-1" id="hv0-2A-3Bf"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_sample_drawer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-kl-6N2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZA-14-a6J" customClass="DrawerView" customModule="ios_sample_drawer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AZA-14-a6J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3vW-g9-Ocu"/>
+                            <constraint firstAttribute="bottom" secondItem="AZA-14-a6J" secondAttribute="bottom" id="5xE-hU-M0D"/>
+                            <constraint firstItem="AZA-14-a6J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dxf-kH-vyX"/>
+                            <constraint firstItem="oSc-kl-6N2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TLO-YL-drv"/>
+                            <constraint firstItem="oSc-kl-6N2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Y0J-rM-cGh"/>
+                            <constraint firstAttribute="trailing" secondItem="oSc-kl-6N2" secondAttribute="trailing" id="YTF-nv-jaT"/>
+                            <constraint firstAttribute="trailing" secondItem="AZA-14-a6J" secondAttribute="trailing" id="a3A-wX-hEn"/>
+                            <constraint firstAttribute="bottom" secondItem="oSc-kl-6N2" secondAttribute="bottom" id="dOQ-Gp-GRP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawerView" destination="AZA-14-a6J" id="hmK-eJ-qXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
